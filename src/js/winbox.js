@@ -6,6 +6,11 @@
  * https://github.com/nextapps-de/winbox
  */
 
+
+//import interact from 'interactjs';
+//const interact = require('interactjs')
+//import interact from './interact.js';
+
 import template from "./template.js";
 import { addListener, removeListener, setStyle, setText, getByClass, addClass, removeClass, hasClass, preventEvent } from "./helper.js";
 
@@ -382,7 +387,8 @@ function setup(){
  */
 
 function register(self){
-
+    console.log("register(self) - supressing: drag, and resize");
+    /*
     addWindowListener(self, "drag");
     addWindowListener(self, "n");
     addWindowListener(self, "s");
@@ -392,7 +398,8 @@ function register(self){
     addWindowListener(self, "ne");
     addWindowListener(self, "se");
     addWindowListener(self, "sw");
-
+    */
+    
     addListener(getByClass(self.dom, "wb-min"), "click", function(event){
 
         preventEvent(event);
